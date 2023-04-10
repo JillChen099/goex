@@ -313,6 +313,12 @@ func (un *RespUnmarshaler) UnmarshalGetPositionsResponse(data []byte) ([]Futures
 				pos.UplRatio = cast.ToFloat64(valStr)
 			case "lever":
 				pos.Lever = cast.ToFloat64(valStr)
+			case "posId":
+				pos.PosID = valStr
+			case "cTime":
+				pos.CreateTime = valStr
+			case "uTime":
+				pos.UpdateTime = valStr
 			}
 			return nil
 		})

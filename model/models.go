@@ -126,14 +126,17 @@ type Account struct {
 }
 
 type FuturesPosition struct {
-	PosSide  OrderSide //开仓方向
-	Qty      float64   // 持仓数量
-	AvailQty float64   //可平仓数量
-	AvgPx    float64   //开仓均价
-	LiqPx    float64   // 爆仓价格
-	Upl      float64   //盈亏
-	UplRatio float64   // 盈亏率
-	Lever    float64   //杠杆倍数
+	PosSide    OrderSide // 开仓方向
+	Qty        float64   // 持仓数量
+	AvailQty   float64   // 可平仓数量
+	AvgPx      float64   // 开仓均价
+	LiqPx      float64   // 爆仓价格
+	Upl        float64   // 盈亏
+	UplRatio   float64   // 盈亏率
+	Lever      float64   // 杠杆倍数
+	PosID      string    // 持仓ID
+	CreateTime string    // 创建时间
+	UpdateTime string    // 最近持仓更新时间
 }
 
 type FuturesAccount struct {
